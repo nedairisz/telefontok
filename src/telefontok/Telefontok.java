@@ -4,6 +4,8 @@
  */
 package telefontok;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author NédaÍriszAdelinda(SZ
@@ -26,21 +28,194 @@ public class Telefontok extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel1 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        pnlMeret = new javax.swing.JPanel();
+        rbtIphone15 = new javax.swing.JRadioButton();
+        rbtIphone15Plus = new javax.swing.JRadioButton();
+        rbtIphone15Pro = new javax.swing.JRadioButton();
+        rbtIphone15ProMax = new javax.swing.JRadioButton();
+        chbFolia = new javax.swing.JCheckBox();
+        spnrDarab = new javax.swing.JSpinner();
+        cmbTipus = new javax.swing.JComboBox<>();
+        lblTipus = new javax.swing.JLabel();
+        lblDarab = new javax.swing.JLabel();
+        btnMegse = new javax.swing.JButton();
+        btnRendel = new javax.swing.JButton();
+        lblReszosszeg = new javax.swing.JLabel();
+        txtOsszeg = new javax.swing.JTextField();
+        lblKep = new javax.swing.JLabel();
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
+        );
+
+        jLabel1.setText("jLabel1");
+
+        jLabel2.setText("jLabel2");
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Telefontok\n");
+
+        pnlMeret.setBorder(javax.swing.BorderFactory.createTitledBorder("Méret"));
+
+        rbtIphone15.setText("Iphone 15");
+
+        rbtIphone15Plus.setText("Iphone 15 Plus");
+
+        rbtIphone15Pro.setText("Iphone 15 Pro");
+
+        rbtIphone15ProMax.setText("Iphone 15 Pro Max");
+
+        javax.swing.GroupLayout pnlMeretLayout = new javax.swing.GroupLayout(pnlMeret);
+        pnlMeret.setLayout(pnlMeretLayout);
+        pnlMeretLayout.setHorizontalGroup(
+            pnlMeretLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlMeretLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(pnlMeretLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlMeretLayout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(rbtIphone15ProMax))
+                    .addGroup(pnlMeretLayout.createSequentialGroup()
+                        .addGroup(pnlMeretLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(rbtIphone15)
+                            .addComponent(rbtIphone15Pro)
+                            .addComponent(rbtIphone15Plus))
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap())
+        );
+        pnlMeretLayout.setVerticalGroup(
+            pnlMeretLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlMeretLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(rbtIphone15)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(rbtIphone15Plus)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(rbtIphone15Pro)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(rbtIphone15ProMax))
+        );
+
+        chbFolia.setText("Fólia (+1000)");
+
+        spnrDarab.setModel(new javax.swing.SpinnerNumberModel(1, 1, 5, 1));
+
+        cmbTipus.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { ">>> Válaszzon <<<", "Szilikon", "Ütésálló", "Bőr hatású" }));
+
+        lblTipus.setText("Típus:");
+
+        lblDarab.setText("Darab:");
+
+        btnMegse.setBackground(new java.awt.Color(213, 174, 161));
+        btnMegse.setText("Mégse");
+        btnMegse.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnMegseActionPerformed(evt);
+            }
+        });
+
+        btnRendel.setBackground(new java.awt.Color(213, 174, 161));
+        btnRendel.setText("Rendel");
+        btnRendel.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnRendelActionPerformed(evt);
+            }
+        });
+
+        lblReszosszeg.setText("Részösszeg:");
+
+        lblKep.setIcon(new javax.swing.ImageIcon(getClass().getResource("/kepek/telefontok.jpg"))); // NOI18N
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addComponent(lblKep, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(pnlMeret, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(btnMegse)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(btnRendel))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(lblReszosszeg)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(txtOsszeg, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(0, 84, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(lblDarab)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(spnrDarab, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(chbFolia)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(lblTipus)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(cmbTipus, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(lblKep, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(pnlMeret, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(9, 9, 9)
+                        .addComponent(chbFolia)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(lblDarab)
+                            .addComponent(spnrDarab, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(lblTipus)
+                            .addComponent(cmbTipus, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(lblReszosszeg)
+                            .addComponent(txtOsszeg, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnMegse)
+                    .addComponent(btnRendel))
+                .addContainerGap(16, Short.MAX_VALUE))
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnMegseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMegseActionPerformed
+    System.exit(0);
+    }//GEN-LAST:event_btnMegseActionPerformed
+
+    private void btnRendelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRendelActionPerformed
+    String cim = "Rendelése:";
+    int ikonTipus = JOptionPane.INFORMATION_MESSAGE;
+    JOptionPane.showMessageDialog(null, rendelesOsszegzes, cim, ikonTipus);
+    System.exit(0);
+    
+    }//GEN-LAST:event_btnRendelActionPerformed
 
     /**
      * @param args the command line arguments
@@ -78,5 +253,23 @@ public class Telefontok extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnMegse;
+    private javax.swing.JButton btnRendel;
+    private javax.swing.JCheckBox chbFolia;
+    private javax.swing.JComboBox<String> cmbTipus;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JLabel lblDarab;
+    private javax.swing.JLabel lblKep;
+    private javax.swing.JLabel lblReszosszeg;
+    private javax.swing.JLabel lblTipus;
+    private javax.swing.JPanel pnlMeret;
+    private javax.swing.JRadioButton rbtIphone15;
+    private javax.swing.JRadioButton rbtIphone15Plus;
+    private javax.swing.JRadioButton rbtIphone15Pro;
+    private javax.swing.JRadioButton rbtIphone15ProMax;
+    private javax.swing.JSpinner spnrDarab;
+    private javax.swing.JTextField txtOsszeg;
     // End of variables declaration//GEN-END:variables
 }
